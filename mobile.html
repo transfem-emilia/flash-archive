@@ -29,10 +29,7 @@
         }
     </script>
     <script>
-        // Replace with your Pastebin *raw* link
-        const pastebinURL = "https://gist.githubusercontent.com/transfem-emilia/ff7bcd5ebd0fb82279fd5e6f83ff4d8b/raw/status.txt";
-
-        fetch(pastebinURL)
+        fetch("https://transfem-emilia.pages.dev/status.txt")
           .then(response => response.text())
           .then(data => {
             const flag = data.trim();
