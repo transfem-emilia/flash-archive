@@ -1,0 +1,99 @@
+@font-face {
+    font-family: 'SF Pro Display', sans-serif;
+    src: url('fonts/SFProDisplay-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+}
+
+body {
+    font-family: 'SF Pro Display', sans-serif;
+    font-weight: bold;
+    background-color: #3c2a34; /* Set background color */
+}
+
+#swf-container {
+    width: 100%;
+    max-width: 800px;
+    height: 600px;
+    border: 1px solid #f2b3c0;
+    margin: 20px auto;
+    background-color: #3c2a34;
+    position: relative;
+}
+.buttons {
+    text-align: center;
+    margin-bottom: 20px;
+}
+button {
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: #f36a85;
+    border: 2px solid white; /* Add a solid white border */
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    font-family: 'SF Pro Display', sans-serif;
+    font-weight: bold;
+}
+
+#fullscreen-toggle {
+    display: block;
+    margin: 10px auto;
+}
+.footer-text {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    color: #f2b3c0;
+    font-family: 'SF Pro Display', sans-serif;
+    font-weight: bold;
+}
+.centered-line {
+    text-align: center;
+    margin-top: 20px;
+}
+.social-icon {
+    margin: 0 10px;
+    font-size: 24px;
+    color: #f36a85;
+    text-decoration: none;
+}
+h1, h2, h3, h4 {
+    color: #f36a85; /* Set text color for h3 elements */
+}
+.textthatneedsthis {
+    color: #f36a85; /* Set text color for h3 elements */
+    text-shadow: 
+    -2px -2px 0 #f2b3c0,  /* Top-left */
+    0px -2px 0 #f2b3c0,   /* Top */
+    2px -2px 0 #f2b3c0,   /* Top-right */
+    -2px 0px 0 #f2b3c0,   /* Left */
+    2px 0px 0 #f2b3c0,    /* Right */
+    -2px 2px 0 #f2b3c0,   /* Bottom-left */
+    0px 2px 0 #f2b3c0,    /* Bottom */
+    2px 2px 0 #f2b3c0;    /* Bottom-right */
+}
+a {
+    color: #f36a85; /* Set link color */
+    text-decoration: none; /* Remove underline from links */
+}
+a:hover {
+    text-decoration: underline; /* Underline links on hover */
+}
+.outlined-text {
+    text-shadow: 
+        -1px -1px 0 #f2b3c0,  /* Top-left */
+        0px -1px 0 #f2b3c0,   /* Top */
+        1px -1px 0 #f2b3c0,   /* Top-right */
+        -1px 0px 0 #f2b3c0,   /* Left */
+        1px 0px 0 #f2b3c0,    /* Right */
+        -1px 1px 0 #f2b3c0,   /* Bottom-left */
+        0px 1px 0 #f2b3c0,    /* Bottom */
+        1px 1px 0 #f2b3c0;    /* Bottom-right */
+}
+.spacer {
+    color: #3c2a34; /* Match background color */
+  }
