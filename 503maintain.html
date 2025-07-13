@@ -3,17 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="Emilia's Flash Archive" />
+    <meta property="og:title" content="Under Maintenance - Emilia's Flash Archive" />
     <meta property="og:description" content="Play Flash Games" />
-    <meta property="og:url" content="https://flash-archive.pages.dev/flasharchive.html" />
+    <meta property="og:url" content="https://flash-archive.pages.dev/mobile.html" />
     <meta property="og:image" content="https://flash-archive.pages.dev/WavingGirlTransCanadaFlag.png" />
     <meta property="og:type" content="website" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emilia's Flash Game Archive</title>
+    <title>Under Maintenance - Emilia's Flash Archive</title>
     <link rel="shortcut icon" type="image/x-icon" href="Waving Girl Trans Canada Flag.ico">
     <link rel="stylesheet" href="styles.css">
-    <!-- Include Ruffle JS -->
-    <script src="/ruffle/ruffle.js"></script>
     <script src="https://kit.fontawesome.com/39ffdb166a.js" crossorigin="anonymous"></script>
     <script>
         // Function to check if the device is mobile
@@ -22,11 +20,6 @@
         }
     // Redirect or style links based on device type
         if (isMobile()) {
-        // Redirect mobile users to a different page
-          window.location.href = "https://flash-archive.pages.dev/mobile.html"; // replace with your desired URL
-        // Apply underline to all links if the device is mobile
-        }
-        if (isMobile()) {
           document.addEventListener('DOMContentLoaded', function() {
             var links = document.querySelectorAll('a');
             links.forEach(function(link) {
@@ -34,40 +27,15 @@
             });
           });
         }
-    </script>
-    <script>
-        // Replace with your Pastebin *raw* link
-        const pastebinURL = "https://pastebin.com/raw/WY7aGbsY";
-
-        fetch(pastebinURL)
-          .then(response => response.text())
-          .then(data => {
-            const flag = data.trim();
-
-            if (flag === "1") {
-              // Redirect to your maintenance page
-              window.location.href = "503maintain.html"; // Change to your actual path
-            }
-            // If "0", do nothing and continue loading the page
-          })
-          .catch(error => {
-            console.error("Error checking maintenance mode:", error);
-            // Optionally: Redirect or show an error message
-          });
       </script>
 </head>
 <body>
-    <script src="service-worker.js"></script>
     <body style="background-color:#3c2a34;">
     <h3 style="text-align: center; font-size: 40pt; font-family: 'Mea Culpa';"><a href="https://transfem-emilia.pages.dev/" class="no-underline">Emilia Selene</a></h3>
-    <h3 style="text-align: center; font-size: 22pt;">Welcome To Emilia's Flash Game Archive</h3>
+    <h3 style="text-align: center; font-size: 22pt;">The Flash Archive is unavailable due to maintenance</h3>
     <p style="color:#3c2a34;">spacer</p>
     <p style="color:#3c2a34;">spacer</p>
-    <div class="buttons"></div>
-    <div id="swf-container"></div>
-    <h3 style="font-family: 'SF Pro Display', sans-serif; font-weight: bold; color:#f36a85; text-align: center;">To enter fullscreen, right-click the game window and choose Enter Fullscreen</h2>
-
-    <script src="flash archive backend newbeta.js"></script>
+    <h3 style="font-family: 'SF Pro Display', sans-serif; font-weight: bold; color:#f36a85; text-align: center;">Please check back later on a Mac, Windows PC, Linux machine, or another desktop platform.</h2>
     
     <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/t/transfem-emilia/flash-archive?style=flat&label=Version&color=f36a85">
 

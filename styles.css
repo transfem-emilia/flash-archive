@@ -93,6 +93,11 @@ a {
 a:hover {
     text-decoration: underline; /* Underline links on hover */
 }
+
+a.no-underline:hover {
+    text-decoration: none;
+}
+
 .outlined-text {
     text-shadow: 
         -1px -1px 0 #f2b3c0,  /* Top-left */

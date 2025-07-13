@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="Device Not Supported - Emilia's Flash Archive" />
     <meta property="og:description" content="Play Flash Games" />
-    <meta property="og:url" content="https://transfem-emilia.pages.dev/mobile.html" />
-    <meta property="og:image" content="https://transfem-emilia.pages.dev/WavingGirlTransCanadaFlag.png" />
+    <meta property="og:url" content="https://flash-archive.pages.dev/mobile.html" />
+    <meta property="og:image" content="https://flash-archive.pages.dev/WavingGirlTransCanadaFlag.png" />
     <meta property="og:type" content="website" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Device Not Supported</title>
@@ -27,19 +27,35 @@
             });
           });
         }
+    </script>
+    <script>
+        // Replace with your Pastebin *raw* link
+        const pastebinURL = "https://pastebin.com/raw/WY7aGbsY";
+
+        fetch(pastebinURL)
+          .then(response => response.text())
+          .then(data => {
+            const flag = data.trim();
+
+            if (flag === "1") {
+              // Redirect to your maintenance page
+              window.location.href = "503maintain.html"; // Change to your actual path
+            }
+            // If "0", do nothing and continue loading the page
+          })
+          .catch(error => {
+            console.error("Error checking maintenance mode:", error);
+            // Optionally: Redirect or show an error message
+          });
       </script>
 </head>
 <body>
-    <script src="service-worker.js"></script>
     <body style="background-color:#3c2a34;">
-    <h3 style="text-align: center; font-size: 40pt; font-family: 'Mea Culpa';">Emilia Selene</h3>
+    <h3 style="text-align: center; font-size: 40pt; font-family: 'Mea Culpa';"><a href="https://transfem-emilia.pages.dev/" class="no-underline">Emilia Selene</a></h3>
     <h3 style="text-align: center; font-size: 22pt;">Sorry, your device isn't supported</h3>
-    <h3 style="text-align: center; font-size: 18pt;"><a href="https://transfem-emilia.pages/dev">Emilia's Website &rarr;</a></h3>
     <p style="color:#3c2a34;">spacer</p>
     <p style="color:#3c2a34;">spacer</p>
     <h3 style="font-family: 'SF Pro Display', sans-serif; font-weight: bold; color:#f36a85; text-align: center;">To use this website, you must be on a Mac, Windows PC, GNU/Linux computer, or another desktop platform.</h2>
-
-    <script src="flash archive backend newbeta.js"></script>
     
     <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/t/transfem-emilia/flash-archive?style=flat&label=Version&color=f36a85">
 
