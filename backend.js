@@ -67,22 +67,56 @@
     const container = document.getElementById('swf-container');
     let player;
 
-    // Generate selection buttons
-    games.forEach(({ name, file }) => {
-      const b = document.createElement('button');
-      b.textContent = name;
-      b.onclick = () => loadSWF(`/swfs/${file}`);
-      btns.appendChild(b);
-    });
+    // ↓ UA‑based mobile detection
+    const isMobile = /\b(Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini)\b/i
+        .test(navigator.userAgent);
 
-    // Fullscreen, suspend/resume controls
-    document.getElementById('fullscreen-toggle').onclick = () => toggleFullscreen();
-    document.getElementById('suspend-toggle').onclick = () => {
-      if (player) {
-        const api = player.ruffle();
-        api.suspended ? api.resume() : api.suspend();
+    if (isMobile) {
+      // Hide the button list
+      btns.style.display = 'none';
+
+      // Build a dropdown for mobile
+      const select = document.createElement('select');
+      select.id = 'gameSelect';
+      select.style.margin = '1em auto';
+      select.style.display = 'block';
+      select.innerHTML = `<option value="">-- Select Game --</option>`;
+
+      games.forEach(({ name, file }) => {
+        const opt = document.createElement('option');
+        opt.value = file;
+        opt.textContent = name;
+        select.appendChild(opt);
+      });
+
+      select.addEventListener('change', () => {
+        if (select.value) {
+          loadSWF(`/swfs/${select.value}`);
+        }
+      });
+
+      // Insert the dropdown above the SWF container
+      container.parentNode.insertBefore(select, container);
+
+    } else {
+      // Desktop/tablet: render your buttons
+      games.forEach(({ name, file }) => {
+        const b = document.createElement('button');
+        b.textContent = name;
+        b.onclick = () => loadSWF(`/swfs/${file}`);
+        btns.appendChild(b);
+      });
+    }
+
+    // Fullscreen
+    document.getElementById("fs-btn").addEventListener("click", () => {
+      // Only enter fullscreen; no exit code
+      if (player.fullscreenEnabled) {
+        player.enterFullscreen();
+      } else {
+        console.warn("Fullscreen not supported");
       }
-    };
+    });
 
     // 4️⃣ Function: load an SWF
     async function loadSWF(swf) {

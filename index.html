@@ -16,26 +16,6 @@
     <script src="/ruffle/ruffle.js"></script>
     <script src="https://kit.fontawesome.com/39ffdb166a.js" crossorigin="anonymous"></script>
     <script>
-        // Function to check if the device is mobile
-        function isMobile() {
-          return /Mobi|Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/.test(navigator.userAgent);
-        }
-    // Redirect or style links based on device type
-        if (isMobile()) {
-        // Redirect mobile users to a different page
-          window.location.href = "https://flash-archive.pages.dev/mobile.html"; // replace with your desired URL
-        // Apply underline to all links if the device is mobile
-        }
-        if (isMobile()) {
-          document.addEventListener('DOMContentLoaded', function() {
-            var links = document.querySelectorAll('a');
-            links.forEach(function(link) {
-              link.style.textDecoration = 'underline';
-            });
-          });
-        }
-    </script>
-    <script>
       fetch("https://transfem-emilia.pages.dev/status.txt")
           .then(response => response.text())
           .then(data => {
@@ -59,21 +39,16 @@
 <body>
     <script src="service-worker.js"></script>
     <body style="background-color:#3c2a34;">
-    <h3 style="text-align: center; font-size: 40pt; font-family: 'Mea Culpa';"><a href="https://transfem-emilia.pages.dev/" class="no-underline">Emilia Selene</a></h3>
-    <h3 style="text-align: center; font-size: 22pt;">Welcome To Emilia's Flash Game Archive</h3>
-    <p style="color:#3c2a34;">spacer</p>
-    <p style="color:#3c2a34;">spacer</p>
+    <h3 style="text-align: center; font-size: 50pt; font-family: 'Mea Culpa';"><a href="https://transfem-emilia.pages.dev/" class="no-underline">Emilia Selene</a></h3>
+    <h3 style="text-align: center; font-size: 22pt; padding-bottom: 25px">Welcome To Emilia's Flash Game Archive</h3>
     <div class="buttons"></div>
     <div id="swf-container"></div>
-    <h3 style="font-family: 'SF Pro Display', sans-serif; font-weight: bold; color:#f36a85; text-align: center;">To enter fullscreen, right-click the game window and choose Enter Fullscreen</h3>
-
+    <div style="text-align: center;">
+    <button id="fs-btn" style="text-align: center">Enter Fullscreen</button>
+    </div>
     <script src="backend.js"></script>
-    
-    <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/t/transfem-emilia/flash-archive?style=flat&label=Version&color=f36a85">
-
-    <p style="color:#3c2a34;">spacer</p>
-    <p style="color:#3c2a34;">spacer</p>
-    <div class="centered-line">
+    <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/t/transfem-emilia/flash-archive?style=flat-square&label=Version&color=f36a85" style="padding-top: 50px;">
+    <div class="centered-line" style="padding-top: 25px;">
   <a href="https://github.com/transfem-emilia" class="social-icon" target="_blank"><i class="fab fa-github"></i></a>
   <a href="https://dsc.gg/transfem-emilia" class="social-icon" target="_blank"><i class="fab fa-discord"></i></a>
     </div>
