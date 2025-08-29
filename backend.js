@@ -48,6 +48,7 @@
 
     // 3️⃣ Setup UI
     const games = [
+        { name: "Jacksmith", file: "jacksmith.swf" },
         { name: "Papa's Bakeria", file: "papasbakeria.swf" },
         { name: "Papa's Burgeria", file: "papasburgeria.swf" },
         { name: "Papa's Cheeseria", file: "papascheeseria_102.swf" },
