@@ -2,6 +2,7 @@ const CACHE_NAME = 'papa-games-cache-v1';
 const urlsToCache = [
     '/',
     '/ruffle/ruffle.js',
+    '/swfs/candyc.swf',
     '/swfs/jacksmith.swf',
     '/swfs/papasbakeria.swf',
     '/swfs/papasburgeria.swf',
