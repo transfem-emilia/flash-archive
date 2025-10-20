@@ -74,31 +74,7 @@
         .test(navigator.userAgent);
 
     if (isMobile) {
-      // Hide the button list
-      btns.style.display = 'none';
-
-      // Build a dropdown for mobile
-      const select = document.createElement('select');
-      select.id = 'gameSelect';
-      select.style.margin = '1em auto';
-      select.style.display = 'block';
-      select.innerHTML = `<option value="">-- Select Game --</option>`;
-
-      games.forEach(({ name, file }) => {
-        const opt = document.createElement('option');
-        opt.value = file;
-        opt.textContent = name;
-        select.appendChild(opt);
-      });
-
-      select.addEventListener('change', () => {
-        if (select.value) {
-          loadSWF(`/swfs/${select.value}`);
-        }
-      });
-
-      // Insert the dropdown above the SWF container
-      container.parentNode.insertBefore(select, container);
+      window.location.replace("https://mobile.flash.northpoint.website/")
 
     } else {
       // Desktop/tablet: render your buttons
