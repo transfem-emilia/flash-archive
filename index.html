@@ -36,21 +36,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mea+Culpa&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
-<nav class="website-nav">
-<ul>
-  <li><a style="font-family: 'Mea Culpa'; font-size: 20pt; " href="https://northpoint.website">Emilia Selene</a></li>
-  <li><a href="https://5-oclock.northpoint.website">5 O'Clock</a></li>
-  <li><a href="https://flash.northpoint.website">Flash Archive</a></li>
-  <li><a href="https://northpoint.website/usconstit.html">Constitution</a></li>
-  <li><a href="https://northpoint.website/crf.html">Charter</a></li>
-  <li><a href="https://northpoint.website/photos.html">Photo Collections</a></li>
-</ul>
-<div class="hamburger" onclick="this.parentElement.querySelector('ul').classList.toggle('active')">
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
-</nav>
+<div id="navbar"></div>
+<script>
+  fetch("https://northpoint.website/nav.html") 
+    .then(response => response.text())
+    .then(html => {
+      document.getElementById("navbar").innerHTML = html;
+    })
+    .catch(error => {
+      console.error("Error loading navbar:", error);
+    });
+</script>
 <body>
   <script src="service-worker.js"></script>
   <h3 style="text-align: center; font-size: 50pt; font-family: 'Mea Culpa';"><a href="https://northpoint.website/" class="no-underline">Emilia Selene</a></h3>
