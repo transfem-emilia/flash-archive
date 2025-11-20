@@ -15,43 +15,27 @@
     <!-- Include Ruffle JS -->
     <script src="/ruffle/ruffle.js"></script>
     <script src="https://kit.fontawesome.com/39ffdb166a.js" crossorigin="anonymous"></script>
-    <script>
-      fetch("https://northpoint.website/status.txt")
-          .then(response => response.text())
-          .then(data => {
-            const flag = data.trim();
-
-            if (flag === "1") {
-              // Redirect to your maintenance page
-              window.location.href = "503maintain.html"; // Change to your actual path
-            }
-            // If "0", do nothing and continue loading the page
-          })
-          .catch(error => {
-            console.error("Error checking maintenance mode:", error);
-            // Optionally: Redirect or show an error message
-          });
-      </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mea+Culpa&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="bchec.js"></script>
+    <script>
+      fetch("https://northpoint.website/nav.html") 
+        .then(response => response.text())
+        .then(html => {
+          document.getElementById("navbar").innerHTML = html;
+        })
+        .catch(error => {
+          console.error("Error loading navbar:", error);
+        });
+    </script>
+    <script src="service-worker.js"></script>
+    <script src="backend.js"></script>
 </head>
 <div id="navbar"></div>
-<script>
-  fetch("https://northpoint.website/nav.html") 
-    .then(response => response.text())
-    .then(html => {
-      document.getElementById("navbar").innerHTML = html;
-    })
-    .catch(error => {
-      console.error("Error loading navbar:", error);
-    });
-</script>
-<script src="bchec.js"></script>
 <body>
-  <script src="service-worker.js"></script>
   <h3 style="text-align: center; font-size: 50pt; font-family: 'Mea Culpa';"><a href="https://northpoint.website/" class="no-underline">Emilia Selene</a></h3>
-  <h2>Notice: Due to the ongoing Cloudflare maintenance affecting multiple locations, parts of the website may not load or work as expected. There’s no need to contact me.</h2>
+  <h2>Notice: Due to the Cloudflare outage that has happened recently, parts of the website may not load or work as expected. There’s no need to contact me.</h2>
   <h1 class="spacer">spacer</h1>
   <h3 style="text-align: center; font-size: 22pt; padding-bottom: 25px">Welcome To Emilia's Flash Game Archive</h3>
   <div class="buttons"></div>
@@ -59,7 +43,6 @@
   <div style="text-align: center;">
     <button id="fs-btn" style="text-align: center">Enter Fullscreen</button>
   </div>
-  <script src="backend.js"></script>
   <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/t/transfem-emilia/flash-archive?style=flat-square&label=Version&color=f36a85" style="padding-top: 50px;">
   <div class="centered-line">
     <a href="https://github.com/transfem-emilia" class="social-icon" target="_blank"><i class="fab fa-github"></i></a>
