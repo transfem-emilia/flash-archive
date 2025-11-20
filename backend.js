@@ -10,7 +10,7 @@
   const RUFFLE_CDN = "https://unpkg.com/@ruffle-rs/ruffle";
   const LOCAL_RUFFLE = "/ruffle/ruffle.js";
 
-  // 0️⃣ Inject Ruffle script tag (prefers local, falls back to CDN)
+  // 0️Inject Ruffle script tag (prefers local, falls back to CDN)
   function loadRuffleScript(src) {
     return new Promise((resolve, reject) => {
       const script = document.createElement('script');
@@ -22,7 +22,7 @@
     });
   }
 
-  // 1️⃣ Wait for DOM + Ruffle
+  // 1️Wait for DOM + Ruffle
   document.addEventListener('DOMContentLoaded', async () => {
   let usingCDN = false;
   try {
@@ -32,7 +32,7 @@
     await loadRuffleScript(RUFFLE_CDN);
     usingCDN = true;
   }
-    // 2️⃣ Global configuration
+    // Global configuration
   window.RufflePlayer = window.RufflePlayer || {};
   window.RufflePlayer.config = {
     publicPath: usingCDN ? 'https://unpkg.com/@ruffle-rs/ruffle/' : '/ruffle/',
@@ -46,7 +46,7 @@
     // ...other config options
   };
 
-    // 3️⃣ Setup UI
+    // Setup UI
     const games = [
         { name: "Candy Crush (The Original)", file: "candyc.swf" },
         { name: "Jacksmith", file: "jacksmith.swf" },
@@ -96,7 +96,7 @@
       }
     });
 
-    // 4️⃣ Function: load an SWF
+    // Function: load an SWF
     async function loadSWF(swf) {
       container.innerHTML = '';
       const r = window.RufflePlayer.newest();
@@ -127,7 +127,7 @@
       }
     }
 
-    // 5️⃣ Fullscreen toggle helper
+    // 5Fullscreen toggle helper
     function toggleFullscreen() {
       if (!player) return;
       const api = player.ruffle();
