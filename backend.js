@@ -50,6 +50,8 @@
     const games = [
         { name: "Candy Crush (The Original)", file: "candyc.swf" },
         { name: "Jacksmith", file: "jacksmith.swf" },
+        { name: "Learn to Fly", file: "ltf.swf" },
+        { name: "Learn to Fly 2", file: "ltf2.swf" },
         { name: "Papa's Bakeria", file: "papasbakeria.swf" },
         { name: "Papa's Burgeria", file: "papasburgeria.swf" },
         { name: "Papa's Cheeseria", file: "papascheeseria_102.swf" },

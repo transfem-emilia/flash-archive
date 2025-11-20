@@ -4,6 +4,8 @@ const urlsToCache = [
     '/ruffle/ruffle.js',
     '/swfs/candyc.swf',
     '/swfs/jacksmith.swf',
+    '/swfs/ltf.swf',
+    '/swfs/ltf2.swf',
     '/swfs/papasbakeria.swf',
     '/swfs/papasburgeria.swf',
     '/swfs/papascheeseria_102.swf',
