@@ -19,7 +19,8 @@ const urlsToCache = [
     '/swfs/papasscooperia_v102.swf',
     '/swfs/papassushiria.swf',
     '/swfs/papastacomia.swf',
-    '/swfs/papaswingeria.swf'
+    '/swfs/papaswingeria.swf',
+    '/swfs/twhg.swf'
 ];
 
 self.addEventListener('install', (event) => {

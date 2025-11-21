@@ -65,7 +65,8 @@
         { name: "Papa's Scooperia", file: "papasscooperia_v102.swf" },
         { name: "Papa's Sushiria", file: "papassushiria.swf" },
         { name: "Papa's Taco Mia", file: "papastacomia.swf" },
-        { name: "Papa's Wingeria", file: "papaswingeria.swf" }
+        { name: "Papa's Wingeria", file: "papaswingeria.swf" },
+        { name: "The World's Hardest Game", file: "twhg.swf"}
     ];
     const btns = document.querySelector('.buttons');
     const container = document.getElementById('swf-container');
