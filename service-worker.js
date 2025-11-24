@@ -1,4 +1,4 @@
-const CACHE_NAME = 'papa-games-cache-v1';
+const CACHE_NAME = 'flash-archives-cache-v1';
 const urlsToCache = [
     '/',
     '/ruffle/ruffle.js',
@@ -6,6 +6,9 @@ const urlsToCache = [
     '/swfs/jacksmith.swf',
     '/swfs/ltf.swf',
     '/swfs/ltf2.swf',
+    '/swfs/mx1.swf',
+    '/swfs/mx2.swf',
+    '/swfs/mx3.swf',
     '/swfs/papasbakeria.swf',
     '/swfs/papasburgeria.swf',
     '/swfs/papascheeseria_102.swf',
