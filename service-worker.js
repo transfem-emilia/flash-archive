@@ -22,7 +22,6 @@ const urlsToCache = [
     '/swfs/papaswingeria.swf',
     '/swfs/Run.swf',
     '/swfs/Run2.swf',
-    '/swfs/Run3.swf',
     '/swfs/twhg.swf'
 ];
 

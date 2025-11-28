@@ -68,7 +68,6 @@
         { name: "Papa's Wingeria", file: "papaswingeria.swf" },
         { name: "Run", file: "Run.swf" },
         { name: "Run 2", file: "Run2.swf" },
-        { name: "Run 3", file: "Run3.swf" },
         { name: "The World's Hardest Game", file: "twhg.swf"}
     ];
     const btns = document.querySelector('.buttons');
