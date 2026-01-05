@@ -79,7 +79,7 @@
         .test(navigator.userAgent);
 
     if (isMobile) {
-      window.location.replace("https://mobile.flash.northpoint.website/")
+      window.location.replace("https://mobile.flash.greatonthelakes.com/")
 
     } else {
       // Desktop/tablet: render your buttons
