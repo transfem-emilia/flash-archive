@@ -28,12 +28,17 @@
           });
         }
       </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mea+Culpa&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-</head>
-<div id="navbar"></div>
-<script>
+      <script>
+      fetch("https://www.greatonthelakes.com/nav.html") 
+        .then(response => response.text())
+        .then(html => {
+          document.getElementById("navbar").innerHTML = html;
+        })
+        .catch(error => {
+          console.error("Error loading navbar:", error);
+        });
+    </script>
+    <script>
     fetch("https://flash.greatonthelakes.com/footer.html") 
       .then(response => response.text())
       .then(html => {
@@ -42,7 +47,12 @@
       .catch(error => {
         console.error("Error loading footer:", error);
       });
-</script>
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mea+Culpa&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<div id="navbar"></div>
 <body>
     <h3 style="text-align: center; font-size: 40pt; font-family: 'Mea Culpa';"><a href="https://www.greatonthelakes.com/" class="no-underline">Emilia Selene</a></h3>
     <h3 style="text-align: center; font-size: 22pt;">The Flash Archive is unavailable due to maintenance</h3>
