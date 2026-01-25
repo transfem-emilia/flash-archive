@@ -1,6 +1,6 @@
 // Array of profile picture file names
 const profilePictures = [
-    'WavingGirlTransCanadaFlag.png',
+    'GOTL.png',
     'WavingGirlLesbianCanadaFlag.png'
 ];
 
