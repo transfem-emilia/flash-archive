@@ -107,11 +107,13 @@
       const r = window.RufflePlayer.newest();
       player = r.createPlayer();
       // Per-instance overrides
-      player.ruffle().config = { allowScriptAccess: false };
+      player.ruffle().config = { 
+      allowScriptAccess: false,
+      logo: "https://flash.greatonthelakes.com/images/GOTL.png"
+      };
       player.style.width = '100%';
       player.style.height = '100%';
       player.style.setProperty('--splash-screen-background', '#3c2a34'); // soft pink, for example
-      player.style.setProperty('--logo-display', 'none'); // hide the logo
       container.appendChild(player);
 
       // Metadata/event handlers
