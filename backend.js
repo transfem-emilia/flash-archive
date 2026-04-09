@@ -79,7 +79,7 @@
         .test(navigator.userAgent);
 
     if (isMobile) {
-      window.location.replace("https://mobile.flash.greatonthelakes.com/")
+      window.location.replace("https://mobile.flash.archive.georgian-speedvale.org/")
 
     } else {
       // Desktop/tablet: render your buttons
